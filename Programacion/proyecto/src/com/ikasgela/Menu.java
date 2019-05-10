@@ -1,5 +1,9 @@
 package com.ikasgela;
 
+
+
+import com.ikasgela.ClasesBD.LoginBD;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,33 +16,28 @@ public class Menu {
     static JFrame frame = new JFrame();
 
     public static void main(String[] args) {
+        new LoginBD().conectar();
         frame.setContentPane(new Menu().menu);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
+
     }
 
     public Menu() {
-        quieroSerSocioButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        quieroSerSocioButton.addActionListener(e -> {
             frame.setContentPane(new Registro().getRegistro());
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.pack();
             frame.setVisible(true);
-            }
         });
-        soySocioButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                frame.setContentPane(new Login().getPanel());
-                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                frame.pack();
-                frame.setVisible(true);
-            }
+        soySocioButton.addActionListener(e -> {
+            frame.setContentPane(new Login().getPanel());
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.pack();
+            frame.setVisible(true);
         });
     }
-
 
 
     public JButton getQuieroSerSocioButton() {

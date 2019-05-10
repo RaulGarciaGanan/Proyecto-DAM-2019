@@ -16,14 +16,11 @@ public class MenuAdministrador {
 
 
     public MenuAdministrador() {
-        volverButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                frame.setContentPane(new Menu().getMenu());
-                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                frame.pack();
-                frame.setVisible(true);
-            }
+        volverButton.addActionListener(e -> {
+            frame.setContentPane(new Menu().getMenu());
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.pack();
+            frame.setVisible(true);
         });
     }
 

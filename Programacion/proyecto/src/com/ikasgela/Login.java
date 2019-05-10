@@ -13,14 +13,12 @@ public class Login {
 
 
     public Login() {
-        cancelarButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        cancelarButton.addActionListener(e -> {
 
-                Menu.getFrame().setContentPane(new Menu().getMenu());
-                Menu.getFrame().pack();
-                Menu.getFrame().setVisible(true);
-            }
+            Menu.getFrame().setContentPane(new Menu().getMenu());
+            Menu.getFrame().pack();
+            Menu.getFrame().setVisible(true);
+
         });
     }
 

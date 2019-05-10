@@ -18,13 +18,10 @@ public class Registro {
 
 
     public Registro() {
-        cancelarButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                Menu.getFrame().setContentPane(new Menu().getMenu());
-                Menu.getFrame().pack();
-                Menu.getFrame().setVisible(true);
-            }
+        cancelarButton.addActionListener(e -> {
+            Menu.getFrame().setContentPane(new Menu().getMenu());
+            Menu.getFrame().pack();
+            Menu.getFrame().setVisible(true);
         });
     }
 

@@ -14,13 +14,10 @@ public class MenuUsuario {
     static JFrame frame = new JFrame();
 
     public MenuUsuario() {
-        volverButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                Menu.getFrame().setContentPane(new Menu().getMenu());
-                Menu.getFrame().pack();
-                Menu.getFrame().setVisible(true);
-            }
+        volverButton.addActionListener(e -> {
+            Menu.getFrame().setContentPane(new Menu().getMenu());
+            Menu.getFrame().pack();
+            Menu.getFrame().setVisible(true);
         });
     }
 
