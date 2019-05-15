@@ -49,6 +49,7 @@ public class Socios {
         return Telefono;
     }
 
+
     public void setTelefono(String telefono) {
         Telefono = telefono;
     }

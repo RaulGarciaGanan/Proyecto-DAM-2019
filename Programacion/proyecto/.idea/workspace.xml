@@ -2,28 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5725d890-21c4-459f-b319-816272522c44" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/ojdbc8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/ikasgela/Clases/Socios.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/ikasgela/Clases/Usuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/ikasgela/ClasesBD/LoginBD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ikasgela/Clases/Actividad.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ikasgela/Clases/Administrador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ikasgela/Clases/Cuota.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ikasgela/Clases/Junta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyecto/com/ikasgela/Login$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyecto/com/ikasgela/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto/com/ikasgela/Login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyecto/com/ikasgela/Menu$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyecto/com/ikasgela/Menu$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyecto/com/ikasgela/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto/com/ikasgela/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyecto/com/ikasgela/MenuAdministrador$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyecto/com/ikasgela/MenuAdministrador.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto/com/ikasgela/MenuAdministrador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyecto/com/ikasgela/MenuUsuario$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyecto/com/ikasgela/MenuUsuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto/com/ikasgela/MenuUsuario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyecto/com/ikasgela/Registro$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyecto/com/ikasgela/Registro.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto/com/ikasgela/Registro.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyecto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ikasgela/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ikasgela/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ikasgela/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ikasgela/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ikasgela/MenuAdministrador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ikasgela/MenuAdministrador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ikasgela/MenuUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ikasgela/MenuUsuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ikasgela/Registro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ikasgela/Registro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ikasgela/Clases/Socios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ikasgela/Clases/Socios.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,28 +17,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ikasgela/Login.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ikasgela/Clases/Socios.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="816">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
               <folding>
                 <element signature="e#639#640#0" expanded="true" />
                 <element signature="e#668#669#0" expanded="true" />
@@ -89,11 +60,59 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ikasgela/Clases/Usuario.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="80">
-              <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+              <caret line="4" column="35" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/ikasgela/Clases/Administrador.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/ikasgela/Clases/Junta.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+              <folding>
+                <element signature="e#342#343#0" expanded="true" />
+                <element signature="e#396#397#0" expanded="true" />
+                <element signature="e#444#445#0" expanded="true" />
+                <element signature="e#478#479#0" expanded="true" />
+                <element signature="e#510#511#0" expanded="true" />
+                <element signature="e#558#559#0" expanded="true" />
+                <element signature="e#600#601#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/ikasgela/Clases/Cuota.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/ikasgela/Clases/Actividad.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -135,37 +154,8 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ikasgela/Menu.form">
+        <entry file="file://$PROJECT_DIR$/src/com/ikasgela/Login.form">
           <provider selected="true" editor-type-id="ui-designer" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ikasgela/ListadoSocios.form">
-          <provider selected="true" editor-type-id="ui-designer" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ikasgela/Menu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="28" column="63" lean-forward="true" selection-start-line="28" selection-start-column="63" selection-end-line="28" selection-end-column="63" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ikasgela/ClasesBD/LoginBD.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="23" column="57" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
         </entry>
       </file>
     </leaf>
@@ -210,12 +200,16 @@
         <option value="$PROJECT_DIR$/src/com/ikasgela/Login.java" />
         <option value="$PROJECT_DIR$/src/com/ikasgela/ClasesBD/LoginBD.java" />
         <option value="$PROJECT_DIR$/src/com/ikasgela/Menu.java" />
-        <option value="$PROJECT_DIR$/src/com/ikasgela/Clases/Socios.java" />
         <option value="$PROJECT_DIR$/src/com/ikasgela/Clases/Usuario.java" />
+        <option value="$PROJECT_DIR$/src/com/ikasgela/Clases/Administrador.java" />
+        <option value="$PROJECT_DIR$/src/com/ikasgela/Clases/Junta.java" />
+        <option value="$PROJECT_DIR$/src/com/ikasgela/Clases/Actividad.java" />
+        <option value="$PROJECT_DIR$/src/com/ikasgela/Clases/Socios.java" />
+        <option value="$PROJECT_DIR$/src/com/ikasgela/Clases/Cuota.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1057" />
@@ -226,6 +220,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -257,13 +252,12 @@
               <item name="proyecto" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="ikasgela" type="462c0819:PsiDirectoryNode" />
-              <item name="Registro" type="e9f4de52:FormNode" />
+              <item name="ClasesBD" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -273,7 +267,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="true" />
-    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="false" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557431692791" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/ojdbc8.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -340,9 +334,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="953" y="0" width="974" height="1057" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2510661" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.5196937" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -369,6 +363,10 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.desktop/java/awt/event/ActionListener.java">
@@ -524,16 +522,49 @@
     <entry file="file://$PROJECT_DIR$/src/com/ikasgela/Cuotas.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ikasgela/Login.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ikasgela/Registro.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ikasgela/MenuAdministrador.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ikasgela/ClasesBD/LoginBD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="23" column="57" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ikasgela/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="28" column="63" selection-start-line="28" selection-start-column="63" selection-end-line="28" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ikasgela/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ikasgela/Menu.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ikasgela/ListadoSocios.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ikasgela/Login.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ikasgela/MenuAdministrador.java">
@@ -556,39 +587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ikasgela/Menu.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ikasgela/ClasesBD/LoginBD.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="23" column="57" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ikasgela/Menu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="28" column="63" lean-forward="true" selection-start-line="28" selection-start-column="63" selection-end-line="28" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ikasgela/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ikasgela/Registro.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -599,10 +597,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ikasgela/Clases/Usuario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="35" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ikasgela/Clases/Junta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+          <folding>
+            <element signature="e#342#343#0" expanded="true" />
+            <element signature="e#396#397#0" expanded="true" />
+            <element signature="e#444#445#0" expanded="true" />
+            <element signature="e#478#479#0" expanded="true" />
+            <element signature="e#510#511#0" expanded="true" />
+            <element signature="e#558#559#0" expanded="true" />
+            <element signature="e#600#601#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ikasgela/Clases/Administrador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ikasgela/Clases/Actividad.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ikasgela/Clases/Socios.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="816">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
           <folding>
             <element signature="e#639#640#0" expanded="true" />
             <element signature="e#668#669#0" expanded="true" />
@@ -636,10 +674,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ikasgela/Clases/Usuario.java">
+    <entry file="file://$PROJECT_DIR$/src/com/ikasgela/Clases/Cuota.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+        <state relative-caret-position="60">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
