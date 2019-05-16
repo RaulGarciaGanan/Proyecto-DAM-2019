@@ -2,11 +2,10 @@ package com.ikasgela;
 
 
 
-import com.ikasgela.ClasesBD.LoginBD;
+import com.ikasgela.ClasesBD.GenericoBD;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 public class Menu {
     private JButton quieroSerSocioButton;
@@ -15,13 +14,13 @@ public class Menu {
 
     static JFrame frame = new JFrame();
 
-    public static void main(String[] args) {
-        new LoginBD().conectar();
+    public static void main(String[] args) throws SQLException {
+        new GenericoBD().conectar();
         frame.setContentPane(new Menu().menu);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
-
+        frame.setLocationRelativeTo(null);
     }
 
     public Menu() {
@@ -30,12 +29,14 @@ public class Menu {
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.pack();
             frame.setVisible(true);
+            frame.setLocationRelativeTo(null);
         });
         soySocioButton.addActionListener(e -> {
             frame.setContentPane(new Login().getPanel());
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.pack();
             frame.setVisible(true);
+            frame.setLocationRelativeTo(null);
         });
     }
 

@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class LoginBD {
+public class GenericoBD {
 
     public void conectar() {
         System.out.println("--- Conexión a Oracle --------------------------");
@@ -24,9 +24,22 @@ public class LoginBD {
             System.out.println("INFO: Conexión abierta");
 
         } catch (SQLException ex) {
-            Logger.getLogger(LoginBD.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(GenericoBD.class.getName()).log(Level.SEVERE, null, ex);
         }
         System.out.println("------------------------------------------------");
+    }
+
+    public void cerrarConexion() throws SQLException{
+
+        try
+        {
+            Connection conn = null;
+            System.out.print("Conexion cerrada");
+            conn.close();
+        }
+        catch(SQLException e){
+
+        }
     }
 
 }

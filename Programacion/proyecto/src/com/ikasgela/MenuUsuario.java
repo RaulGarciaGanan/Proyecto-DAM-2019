@@ -18,6 +18,7 @@ public class MenuUsuario {
             Menu.getFrame().setContentPane(new Menu().getMenu());
             Menu.getFrame().pack();
             Menu.getFrame().setVisible(true);
+            frame.setLocationRelativeTo(null);
         });
     }
 

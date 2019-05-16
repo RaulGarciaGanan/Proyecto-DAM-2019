@@ -2,7 +2,7 @@ package com.ikasgela.Clases;
 
 import java.sql.Time;
 
-public class Socios {
+public class Socio {
     private String Nombre;
     private String Apellido;
     private String DNI;
@@ -11,7 +11,7 @@ public class Socios {
     private Time Fecha_Nacimiento;
     private String Cargo;
 
-    public Socios(String nombre, String apellido, String DNI, String telefono, String email, Time fecha_Nacimiento, String cargo) {
+    public Socio(String nombre, String apellido, String DNI, String telefono, String email, Time fecha_Nacimiento, String cargo) {
         Nombre = nombre;
         Apellido = apellido;
         this.DNI = DNI;

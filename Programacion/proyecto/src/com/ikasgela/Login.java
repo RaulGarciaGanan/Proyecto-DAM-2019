@@ -1,5 +1,7 @@
 package com.ikasgela;
 
+import com.ikasgela.Clases.Proyecto;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,11 +16,24 @@ public class Login {
 
     public Login() {
         cancelarButton.addActionListener(e -> {
-
             Menu.getFrame().setContentPane(new Menu().getMenu());
             Menu.getFrame().pack();
             Menu.getFrame().setVisible(true);
+            Menu.getFrame().setLocationRelativeTo(null);
 
+        });
+
+        loguearseButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String contra = new String(passwordField1.getPassword());
+                if (textField1.getText().equals("root")&&contra.equals("root"))
+                    Proyecto.inicioRoot();
+
+                else {
+                    /*Proyecto.login(jTextField1.getText(), contra);*/
+                }
+            }
         });
     }
 

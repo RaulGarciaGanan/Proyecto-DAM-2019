@@ -28,6 +28,8 @@ public class DatosPersonales {
                 frame.setContentPane(new Menu().getMenu());
                 frame.pack();
                 frame.setVisible(true);
+                frame.setLocationRelativeTo(null);
+                frame.setLocationRelativeTo(null);
             }
         });
     }

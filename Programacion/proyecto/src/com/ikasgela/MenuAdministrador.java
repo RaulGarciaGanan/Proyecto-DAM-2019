@@ -17,10 +17,11 @@ public class MenuAdministrador {
 
     public MenuAdministrador() {
         volverButton.addActionListener(e -> {
-            frame.setContentPane(new Menu().getMenu());
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame.pack();
-            frame.setVisible(true);
+            Menu.getFrame().setContentPane(new Menu().getMenu());
+            Menu.getFrame().setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            Menu.getFrame().pack();
+            Menu.getFrame().setVisible(true);
+            Menu.getFrame().setLocationRelativeTo(null);
         });
     }
 
