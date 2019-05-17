@@ -1,23 +1,49 @@
 package com.ikasgela;
 
+import com.ikasgela.Clases.Cuota;
+
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class MenuAdministrador {
-    private JButton gestionDeSociosButton;
     private JPanel MenuAdministrador;
+    private JButton gestionDeSociosButton;
     private JButton gestionDeCuotasButton;
     private JButton salidasButton;
     private JButton datosPersonalesButton;
     private JButton volverButton;
 
-    static JFrame frame = new JFrame();
-
+    public static JPanel menuAdmin = new MenuAdministrador().MenuAdministrador;
 
     public MenuAdministrador() {
         volverButton.addActionListener(e -> {
-            Menu.getFrame().setContentPane(new Menu().getMenu());
+            Menu.getFrame().setContentPane(Menu.menuGlobal);
+            Menu.getFrame().pack();
+            Menu.getFrame().setVisible(true);
+            Menu.getFrame().setLocationRelativeTo(null);
+        });
+        gestionDeSociosButton.addActionListener(e -> {
+            Menu.getFrame().setContentPane(GestionUsuarios.menuGestionUsuarios);
+            Menu.getFrame().setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            Menu.getFrame().pack();
+            Menu.getFrame().setVisible(true);
+            Menu.getFrame().setLocationRelativeTo(null);
+        });
+        gestionDeCuotasButton.addActionListener(e -> {
+            Menu.getFrame().setContentPane(Cuotas.cuotasMenu);
+            Menu.getFrame().setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            Menu.getFrame().pack();
+            Menu.getFrame().setVisible(true);
+            Menu.getFrame().setLocationRelativeTo(null);
+        });
+        salidasButton.addActionListener(e -> {
+            Menu.getFrame().setContentPane(GestionActividades.actividadesMenu);
+            Menu.getFrame().setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            Menu.getFrame().pack();
+            Menu.getFrame().setVisible(true);
+            Menu.getFrame().setLocationRelativeTo(null);
+        });
+        datosPersonalesButton.addActionListener(e -> {
+            Menu.getFrame().setContentPane(DatosPersonales.datosPersonalesMenu);
             Menu.getFrame().setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             Menu.getFrame().pack();
             Menu.getFrame().setVisible(true);
@@ -72,4 +98,6 @@ public class MenuAdministrador {
     public void setVolverButton(JButton volverButton) {
         this.volverButton = volverButton;
     }
+
+
 }

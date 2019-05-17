@@ -10,18 +10,15 @@ public class Cuotas {
     private JButton modificarCuotasDeSocioButton;
     private JButton volverButton;
 
-    static JFrame frame = new JFrame();
+    public static JPanel cuotasMenu = new Cuotas().Cuotas;
 
     public Cuotas() {
-        volverButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                frame.setContentPane(new Menu().getMenu());
-                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                frame.pack();
-                frame.setVisible(true);
-                frame.setLocationRelativeTo(null);
-            }
+        volverButton.addActionListener(e -> {
+            Menu.getFrame().setContentPane(MenuAdministrador.menuAdmin);
+            Menu.getFrame().setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            Menu.getFrame().pack();
+            Menu.getFrame().setVisible(true);
+            Menu.getFrame().setLocationRelativeTo(null);
         });
     }
 

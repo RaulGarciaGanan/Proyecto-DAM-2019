@@ -19,17 +19,17 @@ public class DatosPersonales {
     private JTextField TFEmail;
     private JTextField TFFechaNacimiento;
 
-    static JFrame frame = new JFrame();
+    public static JPanel datosPersonalesMenu = new DatosPersonales().DatosPersonal;
 
     public DatosPersonales() {
         volverButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame.setContentPane(new Menu().getMenu());
-                frame.pack();
-                frame.setVisible(true);
-                frame.setLocationRelativeTo(null);
-                frame.setLocationRelativeTo(null);
+                Menu.getFrame().setContentPane(MenuAdministrador.menuAdmin);
+                Menu.getFrame().pack();
+                Menu.getFrame().setVisible(true);
+                Menu.getFrame().setLocationRelativeTo(null);
+                Menu.getFrame().setLocationRelativeTo(null);
             }
         });
     }

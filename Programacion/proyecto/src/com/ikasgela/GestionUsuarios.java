@@ -3,19 +3,18 @@ package com.ikasgela;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.ComponentAdapter;
 
 public class GestionUsuarios {
-    private JButton añadirSociosButton;
+    private JButton anadirSociosButton;
     private JPanel GestionUsuario;
     private JButton listadoDeSociosButton;
     private JButton gestionDeLaJuntaButton;
     private JButton volverButton;
 
-    static JFrame frame = new JFrame();
+    public static JPanel menuGestionUsuarios = new GestionUsuarios().GestionUsuario;
 
     public GestionUsuarios() {
-        añadirSociosButton.addActionListener(new ActionListener() {
+        anadirSociosButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
@@ -36,21 +35,21 @@ public class GestionUsuarios {
         volverButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame.setContentPane(new Menu().getMenu());
-                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                frame.pack();
-                frame.setVisible(true);
-                frame.setLocationRelativeTo(null);
+                Menu.getFrame().setContentPane(MenuAdministrador.menuAdmin);
+                Menu.getFrame().setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                Menu.getFrame().pack();
+                Menu.getFrame().setVisible(true);
+                Menu.getFrame().setLocationRelativeTo(null);
             }
         });
     }
 
-    public JButton getAñadirSociosButton() {
-        return añadirSociosButton;
+    public JButton getAnadirSociosButton() {
+        return anadirSociosButton;
     }
 
-    public void setAñadirSociosButton(JButton añadirSociosButton) {
-        this.añadirSociosButton = añadirSociosButton;
+    public void setAnadirSociosButton(JButton anadirSociosButton) {
+        this.anadirSociosButton = anadirSociosButton;
     }
 
     public JPanel getGestionUsuario() {

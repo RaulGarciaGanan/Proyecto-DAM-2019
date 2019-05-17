@@ -4,19 +4,18 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ListadoSocios {
+public class Calendario {
     private JTextArea textArea1;
-    private JPanel ListadoSocios;
+    private JPanel Calendario;
     private JButton volverButton;
 
-    public static JPanel sociosMenu = new ListadoSocios().ListadoSocios;
+    public static JPanel calendarioMenu = new Calendario().Calendario;
 
-    public ListadoSocios() {
+    public Calendario() {
         volverButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Menu.getFrame().setContentPane(MenuAdministrador.menuAdmin);
-                Menu.getFrame().setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                Menu.getFrame().setContentPane(GestionActividades.actividadesMenu);
                 Menu.getFrame().pack();
                 Menu.getFrame().setVisible(true);
                 Menu.getFrame().setLocationRelativeTo(null);
@@ -32,19 +31,11 @@ public class ListadoSocios {
         this.textArea1 = textArea1;
     }
 
-    public JPanel getListadoSocios() {
-        return ListadoSocios;
+    public JPanel getCalendario() {
+        return Calendario;
     }
 
-    public void setListadoSocios(JPanel listadoSocios) {
-        ListadoSocios = listadoSocios;
-    }
-
-    public JButton getVolverButton() {
-        return volverButton;
-    }
-
-    public void setVolverButton(JButton volverButton) {
-        this.volverButton = volverButton;
+    public void setCalendario(JPanel calendario) {
+        Calendario = calendario;
     }
 }

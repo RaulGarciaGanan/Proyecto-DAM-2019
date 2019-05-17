@@ -13,10 +13,11 @@ public class Login {
     private JPasswordField passwordField1;
     private JPanel panel;
 
+    public static JPanel loginMenu = new Login().panel;
 
     public Login() {
         cancelarButton.addActionListener(e -> {
-            Menu.getFrame().setContentPane(new Menu().getMenu());
+            Menu.getFrame().setContentPane(Menu.menuGlobal);
             Menu.getFrame().pack();
             Menu.getFrame().setVisible(true);
             Menu.getFrame().setLocationRelativeTo(null);
@@ -29,7 +30,6 @@ public class Login {
                 String contra = new String(passwordField1.getPassword());
                 if (textField1.getText().equals("root")&&contra.equals("root"))
                     Proyecto.inicioRoot();
-
                 else {
                     /*Proyecto.login(jTextField1.getText(), contra);*/
                 }

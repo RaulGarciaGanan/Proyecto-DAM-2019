@@ -9,14 +9,16 @@ import java.sql.SQLException;
 
 public class Menu {
     private JButton quieroSerSocioButton;
-    private JPanel menu;
     private JButton soySocioButton;
+    private JPanel menu;
 
-    static JFrame frame = new JFrame();
+    public static JPanel menuGlobal = new Menu().menu;
+
+     public static JFrame frame = new JFrame();
 
     public static void main(String[] args) throws SQLException {
         new GenericoBD().conectar();
-        frame.setContentPane(new Menu().menu);
+        frame.setContentPane(menuGlobal);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);

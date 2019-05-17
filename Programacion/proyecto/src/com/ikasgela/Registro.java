@@ -15,11 +15,11 @@ public class Registro {
     private JButton enviarButton;
     private JButton cancelarButton;
 
-
+    public static JPanel registroMenu = new Registro().Registro;
 
     public Registro() {
         cancelarButton.addActionListener(e -> {
-            Menu.getFrame().setContentPane(new Menu().getMenu());
+            Menu.getFrame().setContentPane(Menu.menuGlobal);
             Menu.getFrame().pack();
             Menu.getFrame().setVisible(true);
 
