@@ -8,6 +8,7 @@ public class Calendario {
     private JTextArea textArea1;
     private JPanel Calendario;
     private JButton volverButton;
+    private JList list1;
 
     public static JPanel calendarioMenu = new Calendario().Calendario;
 

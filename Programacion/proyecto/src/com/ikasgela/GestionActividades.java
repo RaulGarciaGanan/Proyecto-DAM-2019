@@ -1,7 +1,5 @@
 package com.ikasgela;
 
-import com.ikasgela.Clases.Actividad;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -28,7 +26,7 @@ public class GestionActividades {
         generarNuevaActividadButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Menu.getFrame().setContentPane(ActividadMenu.actividadMenu);
+                Menu.getFrame().setContentPane(ActividadNueva.actividadMenu);
                 Menu.getFrame().pack();
                 Menu.getFrame().setVisible(true);
                 Menu.getFrame().setLocationRelativeTo(null);

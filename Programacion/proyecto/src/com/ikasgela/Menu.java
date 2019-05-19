@@ -12,6 +12,8 @@ public class Menu {
     private JButton soySocioButton;
     private JPanel menu;
 
+    public final int cod_socio;
+
     public static JPanel menuGlobal = new Menu().menu;
 
      public static JFrame frame = new JFrame();
@@ -40,6 +42,7 @@ public class Menu {
             frame.setVisible(true);
             frame.setLocationRelativeTo(null);
         });
+        cod_socio = 0;
     }
 
 

@@ -15,7 +15,7 @@ public class ListadoSocios {
         volverButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Menu.getFrame().setContentPane(MenuAdministrador.menuAdmin);
+                Menu.getFrame().setContentPane(GestionUsuarios.menuGestionUsuarios);
                 Menu.getFrame().setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 Menu.getFrame().pack();
                 Menu.getFrame().setVisible(true);

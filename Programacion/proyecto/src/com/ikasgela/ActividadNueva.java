@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ActividadMenu {
+public class ActividadNueva {
     private JPanel Actividad;
     private JComboBox CBtipoActividad;
     private JComboBox CBDificultad;
@@ -14,9 +14,9 @@ public class ActividadMenu {
     private JButton cancelarButton;
     private JButton guardarButton;
 
-    public static JPanel actividadMenu = new ActividadMenu().Actividad;
+    public static JPanel actividadMenu = new ActividadNueva().Actividad;
 
-    public ActividadMenu() {
+    public ActividadNueva() {
         cancelarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

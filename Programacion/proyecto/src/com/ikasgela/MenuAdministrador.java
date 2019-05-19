@@ -3,6 +3,8 @@ package com.ikasgela;
 import com.ikasgela.Clases.Cuota;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MenuAdministrador {
     private JPanel MenuAdministrador;
@@ -11,14 +13,16 @@ public class MenuAdministrador {
     private JButton salidasButton;
     private JButton datosPersonalesButton;
     private JButton volverButton;
+    private JButton juntasButton;
 
     public static JPanel menuAdmin = new MenuAdministrador().MenuAdministrador;
 
     public MenuAdministrador() {
         volverButton.addActionListener(e -> {
-            Menu.getFrame().setContentPane(Menu.menuGlobal);
+            Menu.getFrame().setContentPane(Juntas.menuJunta);
             Menu.getFrame().pack();
             Menu.getFrame().setVisible(true);
+            Menu.getFrame().setLocationRelativeTo(null);
             Menu.getFrame().setLocationRelativeTo(null);
         });
         gestionDeSociosButton.addActionListener(e -> {
@@ -48,6 +52,16 @@ public class MenuAdministrador {
             Menu.getFrame().pack();
             Menu.getFrame().setVisible(true);
             Menu.getFrame().setLocationRelativeTo(null);
+        });
+        juntasButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Menu.getFrame().setContentPane(Juntas.menuJunta);
+                Menu.getFrame().pack();
+                Menu.getFrame().setVisible(true);
+                Menu.getFrame().setLocationRelativeTo(null);
+                Menu.getFrame().setLocationRelativeTo(null);
+            }
         });
     }
 

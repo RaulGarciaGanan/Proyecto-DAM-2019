@@ -17,21 +17,24 @@ public class GestionUsuarios {
         anadirSociosButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                Menu.getFrame().setContentPane(ValidarUsuario.menuValUsuario);
+                Menu.getFrame().pack();
+                Menu.getFrame().setVisible(true);
+                Menu.getFrame().setLocationRelativeTo(null);
+                Menu.getFrame().setLocationRelativeTo(null);
             }
         });
         listadoDeSociosButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                Menu.getFrame().setContentPane(ListadoSocios.sociosMenu);
+                Menu.getFrame().pack();
+                Menu.getFrame().setVisible(true);
+                Menu.getFrame().setLocationRelativeTo(null);
+                Menu.getFrame().setLocationRelativeTo(null);
             }
         });
-        gestionDeLaJuntaButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
 
-            }
-        });
         volverButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
