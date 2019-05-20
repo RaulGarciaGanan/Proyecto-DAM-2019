@@ -1,6 +1,8 @@
 package com.ikasgela;
 
 import com.ikasgela.Clases.Proyecto;
+import com.ikasgela.Clases.Socio;
+import com.ikasgela.ClasesBD.SocioBD;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -9,8 +11,8 @@ import java.awt.event.ActionListener;
 public class Login {
     private JButton loguearseButton;
     private JButton cancelarButton;
-    private JTextField textField1;
-    private JPasswordField passwordField1;
+    private JTextField Usuario;
+    private JPasswordField Password;
     private JPanel panel;
 
     public static JPanel loginMenu = new Login().panel;
@@ -27,11 +29,15 @@ public class Login {
         loguearseButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String contra = new String(passwordField1.getPassword());
-                if (textField1.getText().equals("root")&&contra.equals("root"))
+                String contra = new String(Password.getPassword());
+                if (Usuario.getText().equals("root")&&contra.equals("root"))
                     Proyecto.inicioRoot();
                 else {
-                    /*Proyecto.login(jTextField1.getText(), contra);*/
+                    try {
+                        SocioBD.logearSocio();
+                    } catch (Exception ex) {
+                        ex.printStackTrace();
+                    }
                 }
             }
         });
@@ -54,20 +60,20 @@ public class Login {
         this.cancelarButton = cancelarButton;
     }
 
-    public JTextField getTextField1() {
-        return textField1;
+    public JTextField getUsuario() {
+        return Usuario;
     }
 
-    public void setTextField1(JTextField textField1) {
-        this.textField1 = textField1;
+    public void setUsuario(JTextField usuario) {
+        this.Usuario = usuario;
     }
 
-    public JPasswordField getPasswordField1() {
-        return passwordField1;
+    public JPasswordField getPassword() {
+        return Password;
     }
 
-    public void setPasswordField1(JPasswordField passwordField1) {
-        this.passwordField1 = passwordField1;
+    public void setPassword(JPasswordField password) {
+        this.Password = password;
     }
 
     public JPanel getPanel() {

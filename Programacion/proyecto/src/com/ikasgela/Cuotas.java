@@ -20,6 +20,16 @@ public class Cuotas {
             Menu.getFrame().setVisible(true);
             Menu.getFrame().setLocationRelativeTo(null);
         });
+        listaDeCuotasButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Menu.getFrame().setContentPane(ListadoCuotas.menuListadoCuotas);
+                Menu.getFrame().setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                Menu.getFrame().pack();
+                Menu.getFrame().setVisible(true);
+                Menu.getFrame().setLocationRelativeTo(null);
+            }
+        });
     }
 
     public JButton getListaDeCuotasButton() {

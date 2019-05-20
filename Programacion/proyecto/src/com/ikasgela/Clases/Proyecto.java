@@ -12,4 +12,6 @@ public class Proyecto {
         Menu.getFrame().setVisible(true);
         Menu.getFrame().setLocationRelativeTo(null);
     }
+
+
 }

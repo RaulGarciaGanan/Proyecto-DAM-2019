@@ -19,7 +19,7 @@ public class MenuAdministrador {
 
     public MenuAdministrador() {
         volverButton.addActionListener(e -> {
-            Menu.getFrame().setContentPane(Juntas.menuJunta);
+            Menu.getFrame().setContentPane(Menu.menuGlobal);
             Menu.getFrame().pack();
             Menu.getFrame().setVisible(true);
             Menu.getFrame().setLocationRelativeTo(null);

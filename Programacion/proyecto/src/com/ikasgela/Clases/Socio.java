@@ -3,6 +3,7 @@ package com.ikasgela.Clases;
 import java.sql.Time;
 
 public class Socio {
+    private String codSocio;
     private String Nombre;
     private String Apellido;
     private String DNI;
@@ -10,8 +11,14 @@ public class Socio {
     private String Email;
     private Time Fecha_Nacimiento;
     private String Cargo;
+    private String Contrasena;
+    private String Tipo;
 
-    public Socio(String nombre, String apellido, String DNI, String telefono, String email, Time fecha_Nacimiento, String cargo) {
+    public Socio() {
+    }
+
+    public Socio(String codSocio, String nombre, String apellido, String DNI, String telefono, String email, Time fecha_Nacimiento, String cargo, String contrasena, String tipo) {
+        this.codSocio = codSocio;
         Nombre = nombre;
         Apellido = apellido;
         this.DNI = DNI;
@@ -19,6 +26,16 @@ public class Socio {
         Email = email;
         Fecha_Nacimiento = fecha_Nacimiento;
         Cargo = cargo;
+        Contrasena = contrasena;
+        Tipo = tipo;
+    }
+
+    public String getCodSocio() {
+        return codSocio;
+    }
+
+    public void setCodSocio(String codSocio) {
+        this.codSocio = codSocio;
     }
 
     public String getNombre() {
@@ -76,5 +93,21 @@ public class Socio {
 
     public void setCargo(String cargo) {
         Cargo = cargo;
+    }
+
+    public String getContrasena() {
+        return Contrasena;
+    }
+
+    public void setContrasena(String contrasena) {
+        Contrasena = contrasena;
+    }
+
+    public String getTipo() {
+        return Tipo;
+    }
+
+    public void setTipo(String tipo) {
+        Tipo = tipo;
     }
 }
