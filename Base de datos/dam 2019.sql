@@ -749,6 +749,7 @@ BEGIN
 END;
     commit;
 END VALIDAR_CUOTA;
+commit;
 END MENDI_TALDEA;
 
 BEGIN
