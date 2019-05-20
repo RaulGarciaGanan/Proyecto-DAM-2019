@@ -15,8 +15,6 @@ public class SocioBD {
     private static Login log = new Login();
 
 
-
-
     public static Socio logearSocio() throws Exception {
         //Utilizamos usuario y nombre para logear a un usuario.
         GenericoBD gbd = new GenericoBD();

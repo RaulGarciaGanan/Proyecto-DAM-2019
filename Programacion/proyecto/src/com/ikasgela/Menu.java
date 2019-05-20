@@ -1,10 +1,10 @@
 package com.ikasgela;
 
 
-
 import com.ikasgela.ClasesBD.GenericoBD;
 
 import javax.swing.*;
+import java.sql.Connection;
 import java.sql.SQLException;
 
 public class Menu {
@@ -16,10 +16,12 @@ public class Menu {
 
     public static JPanel menuGlobal = new Menu().menu;
 
-     public static JFrame frame = new JFrame();
+    public static JFrame frame = new JFrame();
+
+    public static Connection conn;
 
     public static void main(String[] args) throws SQLException {
-        new GenericoBD().conectar();
+        new GenericoBD().conectar(conn);
         frame.setContentPane(menuGlobal);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
@@ -29,14 +31,14 @@ public class Menu {
 
     public Menu() {
         quieroSerSocioButton.addActionListener(e -> {
-            frame.setContentPane(new Registro().getRegistro());
+            frame.setContentPane(Registro.registroMenu);
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.pack();
             frame.setVisible(true);
             frame.setLocationRelativeTo(null);
         });
         soySocioButton.addActionListener(e -> {
-            frame.setContentPane(new Login().getPanel());
+            frame.setContentPane(Login.loginMenu);
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.pack();
             frame.setVisible(true);

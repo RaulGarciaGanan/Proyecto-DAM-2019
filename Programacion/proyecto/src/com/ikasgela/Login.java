@@ -15,7 +15,8 @@ public class Login {
     private JPasswordField Password;
     private JPanel panel;
 
-    public static JPanel loginMenu = new Login().panel;
+    public static Login login = new Login();
+    public static JPanel loginMenu = login.panel;
 
     public Login() {
         cancelarButton.addActionListener(e -> {
