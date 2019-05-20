@@ -100,7 +100,7 @@ SELECT TRUNC(LAST_DAY(SYSDATE)) FROM DUAL;
 
 
 
----------------------------------------------------- CREACIÓN DE TABLAS ---------------------------------------------------------------
+---------------------------------------------------- CREACIÓN DE TABLAS ----------------------------------------------------------
 
 
 CREATE TABLE CALENDARIO(
@@ -292,7 +292,6 @@ BEGIN
     
 END VALIDAR_SOCIO; 
 
-SHOW ERRORS;
 
 ----------------- TRIGGER: COMPROBAR SI EL USUARIO HA PAGADO LA CUOTA ANTES DE FINAL DEL PRESENTE AÑO PARA RENOVAR--------
 
@@ -446,7 +445,7 @@ SET SERVEROUTPUT ON;
 ------------------------------------------- TRRIGGER COMPROBAR MOROSO -----------------------------------------------------
 
 CREATE OR REPLACE TRIGGER COMPROBAR_MOROSO 
-BEFORE INSERT ON ACTIVIDADES_SOCIOS
+BEFORE INSERT ON ACTIVIDADES
 FOR EACH ROW
 
 DECLARE
@@ -466,7 +465,6 @@ END IF;
 
 END COMPROBAR_MOROSO;
 
-SHOW ERRORS;
 
 ----------------------------------------- PROCEDURE MOROSO -----------------------------------------------------------------
 
@@ -496,8 +494,6 @@ END;
 
 END MOROSO;
         
-        
-SHOW ERRORS;
 
 ----------------------- DETERMINAR AÑO BISIESTO------------------------
 
@@ -586,6 +582,7 @@ END;
 select trunc(sysdate,'yyyy') from dual;
 ------------------------------------ PACKAGE --------------------------------------- 
 
+---CABECERA----
 CREATE OR REPLACE PACKAGE MENDI_TALDEA IS
 
 -- PROCEDURE MOROSO
@@ -598,12 +595,13 @@ PROCEDURE VALIDAR_CUOTA (V_COD_SOCIO IN SOCIOS.COD_SOC%TYPE, V_IMPORTE_INGRESADO
 
 --TRIGGER COMPROBAR MOROSO
 
-TRIGGER COMPROBAR_MOROSO 
+TRIGGER COMPROBAR_MOROSO; 
 
 --TRIGGER CONTROL USUARIO
 
- TRIGGER VALIDAR_SOCIO
-
+ TRIGGER VALIDAR_SOCIO;
+ 
+END MENDI_TALDEA;
 
 
 
