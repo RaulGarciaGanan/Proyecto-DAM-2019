@@ -1,7 +1,5 @@
 package com.ikasgela;
 
-import com.ikasgela.Clases.Cuota;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -33,7 +31,7 @@ public class MenuAdministrador {
             Menu.getFrame().setLocationRelativeTo(null);
         });
         gestionDeCuotasButton.addActionListener(e -> {
-            Menu.getFrame().setContentPane(Cuotas.cuotasMenu);
+            Menu.getFrame().setContentPane(GestionCuotas.cuotasMenu);
             Menu.getFrame().setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             Menu.getFrame().pack();
             Menu.getFrame().setVisible(true);
