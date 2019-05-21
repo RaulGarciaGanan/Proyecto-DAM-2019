@@ -31,7 +31,7 @@ public class MenuAdministrador {
             Menu.getFrame().setLocationRelativeTo(null);
         });
         gestionDeCuotasButton.addActionListener(e -> {
-            Menu.getFrame().setContentPane(GestionCuotas.cuotasMenu);
+            Menu.getFrame().setContentPane(GestionCuotas.gestionCuotasCuotasMenu);
             Menu.getFrame().setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             Menu.getFrame().pack();
             Menu.getFrame().setVisible(true);

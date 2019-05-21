@@ -11,14 +11,14 @@ public class MenuUsuario {
     private JButton datosPersonalesButton;
     private JButton volverButton;
 
-    static JFrame frame = new JFrame();
+    public static JPanel menuUsuario = new MenuUsuario().MenuUsuario;
 
     public MenuUsuario() {
         volverButton.addActionListener(e -> {
-            Menu.getFrame().setContentPane(new Menu().getMenu());
+            Menu.getFrame().setContentPane(Menu.menuGlobal);
             Menu.getFrame().pack();
             Menu.getFrame().setVisible(true);
-            frame.setLocationRelativeTo(null);
+            Menu.getFrame().setLocationRelativeTo(null);
         });
     }
 

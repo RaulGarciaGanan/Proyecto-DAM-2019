@@ -31,9 +31,9 @@ public class GenericoBD {
     public void cerrarConexion(Connection conn) throws SQLException {
 
         try {
-            conn = null;
-            System.out.print("Conexion cerrada");
             conn.close();
+            System.out.print("Conexion cerrada");
+            conn = null;
         } catch (SQLException e) {
 
         }

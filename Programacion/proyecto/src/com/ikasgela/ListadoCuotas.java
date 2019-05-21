@@ -15,7 +15,7 @@ public class ListadoCuotas {
         volverButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Menu.getFrame().setContentPane(GestionCuotas.cuotasMenu);
+                Menu.getFrame().setContentPane(GestionCuotas.gestionCuotasCuotasMenu);
                 Menu.getFrame().pack();
                 Menu.getFrame().setVisible(true);
                 Menu.getFrame().setLocationRelativeTo(null);

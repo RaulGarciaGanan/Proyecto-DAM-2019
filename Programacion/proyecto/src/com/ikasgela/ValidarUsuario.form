@@ -80,15 +80,7 @@
           <text value="Fecha de nacimiento"/>
         </properties>
       </component>
-      <component id="69754" class="javax.swing.JTextField" binding="usuario" default-binding="true">
-        <constraints>
-          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-        </constraints>
-        <properties/>
-      </component>
-      <component id="21a5c" class="javax.swing.JTextField" binding="textField2" default-binding="true">
+      <component id="21a5c" class="javax.swing.JTextField" binding="Apellido">
         <constraints>
           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -96,7 +88,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="637f7" class="javax.swing.JTextField" binding="textField3" default-binding="true">
+      <component id="637f7" class="javax.swing.JTextField" binding="DNI">
         <constraints>
           <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -104,7 +96,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="74462" class="javax.swing.JLabel">
+      <component id="74462" class="javax.swing.JLabel" binding="Fecha_Alta">
         <constraints>
           <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -112,7 +104,7 @@
           <text value="Label"/>
         </properties>
       </component>
-      <component id="d3425" class="javax.swing.JTextField" binding="textField4" default-binding="true">
+      <component id="d3425" class="javax.swing.JTextField" binding="Telefono">
         <constraints>
           <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -120,17 +112,9 @@
         </constraints>
         <properties/>
       </component>
-      <component id="1bbb" class="javax.swing.JTextField" binding="textField5" default-binding="true">
+      <component id="1bbb" class="javax.swing.JTextField" binding="Email">
         <constraints>
           <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-        </constraints>
-        <properties/>
-      </component>
-      <component id="ac3d" class="javax.swing.JPasswordField" binding="password" default-binding="true">
-        <constraints>
-          <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
@@ -152,7 +136,7 @@
           <text value="Validar"/>
         </properties>
       </component>
-      <component id="91854" class="javax.swing.JComboBox" binding="comboBox1" default-binding="true">
+      <component id="91854" class="javax.swing.JComboBox" binding="Tipo_socio">
         <constraints>
           <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -166,7 +150,7 @@
           <text value="Cargo:"/>
         </properties>
       </component>
-      <component id="5fa1d" class="javax.swing.JLabel">
+      <component id="5fa1d" class="javax.swing.JLabel" binding="Cargo">
         <constraints>
           <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -181,6 +165,22 @@
         <properties>
           <text value="Volver"/>
         </properties>
+      </component>
+      <component id="2b933" class="javax.swing.JTextField" binding="Nombre">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="15404" class="javax.swing.JTextField" binding="Fecha_naci">
+        <constraints>
+          <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
       </component>
     </children>
   </grid>

@@ -5,16 +5,17 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Juntas {
-    private JTextField textField1;
-    private JTextField textField2;
-    private JTextField textField3;
-    private JTextField textField4;
-    private JTextField textField5;
-    private JTextField textField6;
+    private JTextField Fecha_fin;
+    private JTextField Presidente;
+    private JTextField VidePresi;
+    private JTextField Secretario;
+    private JTextField Tesoreo;
     private JButton volverButton;
     private JButton guardarButton;
-    private JTextField textField7;
+    private JTextField Vocales;
     private JPanel Junta;
+    private JTextField Fecha_inicio;
+
 
     public static JPanel menuJunta = new Juntas().Junta;
 
@@ -30,52 +31,52 @@ public class Juntas {
         });
     }
 
-    public JTextField getTextField1() {
-        return textField1;
+    public JTextField getFecha_inicio() {
+        return Fecha_inicio;
     }
 
-    public void setTextField1(JTextField textField1) {
-        this.textField1 = textField1;
+    public void setFecha_inicio(JTextField fecha_inicio) {
+        Fecha_inicio = fecha_inicio;
     }
 
-    public JTextField getTextField2() {
-        return textField2;
+    public JTextField getFecha_fin() {
+        return Fecha_fin;
     }
 
-    public void setTextField2(JTextField textField2) {
-        this.textField2 = textField2;
+    public void setFecha_fin(JTextField fecha_fin) {
+        Fecha_fin = fecha_fin;
     }
 
-    public JTextField getTextField3() {
-        return textField3;
+    public JTextField getPresidente() {
+        return Presidente;
     }
 
-    public void setTextField3(JTextField textField3) {
-        this.textField3 = textField3;
+    public void setPresidente(JTextField presidente) {
+        Presidente = presidente;
     }
 
-    public JTextField getTextField4() {
-        return textField4;
+    public JTextField getVidePresi() {
+        return VidePresi;
     }
 
-    public void setTextField4(JTextField textField4) {
-        this.textField4 = textField4;
+    public void setVidePresi(JTextField videPresi) {
+        VidePresi = videPresi;
     }
 
-    public JTextField getTextField5() {
-        return textField5;
+    public JTextField getSecretario() {
+        return Secretario;
     }
 
-    public void setTextField5(JTextField textField5) {
-        this.textField5 = textField5;
+    public void setSecretario(JTextField secretario) {
+        Secretario = secretario;
     }
 
-    public JTextField getTextField6() {
-        return textField6;
+    public JTextField getTesoreo() {
+        return Tesoreo;
     }
 
-    public void setTextField6(JTextField textField6) {
-        this.textField6 = textField6;
+    public void setTesoreo(JTextField tesoreo) {
+        Tesoreo = tesoreo;
     }
 
     public JButton getVolverButton() {
@@ -94,12 +95,12 @@ public class Juntas {
         this.guardarButton = guardarButton;
     }
 
-    public JTextField getTextField7() {
-        return textField7;
+    public JTextField getVocales() {
+        return Vocales;
     }
 
-    public void setTextField7(JTextField textField7) {
-        this.textField7 = textField7;
+    public void setVocales(JTextField vocales) {
+        Vocales = vocales;
     }
 
     public JPanel getJunta() {

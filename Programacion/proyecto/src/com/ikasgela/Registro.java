@@ -14,7 +14,9 @@ public class Registro {
     private JTextField TFFecha_Naci;
     private JButton enviarButton;
     private JButton cancelarButton;
+    private JTextField TFContrasena;
 
+    public static Registro registro = new Registro();
     public static JPanel registroMenu = new Registro().Registro;
 
     public Registro() {
@@ -96,5 +98,13 @@ public class Registro {
 
     public void setCancelarButton(JButton cancelarButton) {
         this.cancelarButton = cancelarButton;
+    }
+
+    public JTextField getTFContrasena() {
+        return TFContrasena;
+    }
+
+    public void setTFContrasena(JTextField TFContrasena) {
+        this.TFContrasena = TFContrasena;
     }
 }

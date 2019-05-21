@@ -6,15 +6,18 @@ import java.awt.event.ActionListener;
 
 public class ValidarUsuario {
     private JPanel validarUsuario;
-    private JTextField textField1;
-    private JTextField textField2;
-    private JTextField textField3;
-    private JTextField textField4;
-    private JTextField textField5;
+    private JTextField Nombre;
+    private JTextField Apellido;
+    private JTextField DNI;
+    private JTextField Telefono;
+    private JTextField Email;
     private JPasswordField passwordField1;
     private JButton volverButton;
     private JButton validarButton;
-    private JComboBox comboBox1;
+    private JComboBox Tipo_socio;
+    private JLabel Fecha_Alta;
+    private JTextField Fecha_naci;
+    private JLabel Cargo;
 
     public static JPanel menuValUsuario = new ValidarUsuario().validarUsuario;
 
@@ -38,44 +41,44 @@ public class ValidarUsuario {
         this.validarUsuario = validarUsuario;
     }
 
-    public JTextField getTextField1() {
-        return textField1;
+    public JTextField getNombre() {
+        return Nombre;
     }
 
-    public void setTextField1(JTextField textField1) {
-        this.textField1 = textField1;
+    public void setNombre(JTextField nombre) {
+        Nombre = nombre;
     }
 
-    public JTextField getTextField2() {
-        return textField2;
+    public JTextField getApellido() {
+        return Apellido;
     }
 
-    public void setTextField2(JTextField textField2) {
-        this.textField2 = textField2;
+    public void setApellido(JTextField apellido) {
+        Apellido = apellido;
     }
 
-    public JTextField getTextField3() {
-        return textField3;
+    public JTextField getDNI() {
+        return DNI;
     }
 
-    public void setTextField3(JTextField textField3) {
-        this.textField3 = textField3;
+    public void setDNI(JTextField DNI) {
+        this.DNI = DNI;
     }
 
-    public JTextField getTextField4() {
-        return textField4;
+    public JTextField getTelefono() {
+        return Telefono;
     }
 
-    public void setTextField4(JTextField textField4) {
-        this.textField4 = textField4;
+    public void setTelefono(JTextField telefono) {
+        Telefono = telefono;
     }
 
-    public JTextField getTextField5() {
-        return textField5;
+    public JTextField getEmail() {
+        return Email;
     }
 
-    public void setTextField5(JTextField textField5) {
-        this.textField5 = textField5;
+    public void setEmail(JTextField email) {
+        Email = email;
     }
 
     public JPasswordField getPasswordField1() {
@@ -102,11 +105,35 @@ public class ValidarUsuario {
         this.validarButton = validarButton;
     }
 
-    public JComboBox getComboBox1() {
-        return comboBox1;
+    public JComboBox getTipo_socio() {
+        return Tipo_socio;
     }
 
-    public void setComboBox1(JComboBox comboBox1) {
-        this.comboBox1 = comboBox1;
+    public void setTipo_socio(JComboBox tipo_socio) {
+        Tipo_socio = tipo_socio;
+    }
+
+    public JLabel getFecha_Alta() {
+        return Fecha_Alta;
+    }
+
+    public void setFecha_Alta(JLabel fecha_Alta) {
+        Fecha_Alta = fecha_Alta;
+    }
+
+    public JTextField getFecha_naci() {
+        return Fecha_naci;
+    }
+
+    public void setFecha_naci(JTextField fecha_naci) {
+        Fecha_naci = fecha_naci;
+    }
+
+    public JLabel getCargo() {
+        return Cargo;
+    }
+
+    public void setCargo(JLabel cargo) {
+        Cargo = cargo;
     }
 }
