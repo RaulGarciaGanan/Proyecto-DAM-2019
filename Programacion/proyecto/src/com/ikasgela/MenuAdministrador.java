@@ -12,10 +12,12 @@ public class MenuAdministrador {
     private JButton datosPersonalesButton;
     private JButton volverButton;
     private JButton juntasButton;
+    private JLabel Cod_soc;
 
     public static JPanel menuAdmin = new MenuAdministrador().MenuAdministrador;
 
     public MenuAdministrador() {
+        Cod_soc.setText(String.valueOf(Menu.codigo_socio));
         volverButton.addActionListener(e -> {
             Menu.getFrame().setContentPane(Menu.menuGlobal);
             Menu.getFrame().pack();
@@ -24,7 +26,7 @@ public class MenuAdministrador {
             Menu.getFrame().setLocationRelativeTo(null);
         });
         gestionDeSociosButton.addActionListener(e -> {
-            Menu.getFrame().setContentPane(GestionUsuarios.menuGestionUsuarios);
+            Menu.getFrame().setContentPane(ListadoSocios.sociosMenu);
             Menu.getFrame().setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             Menu.getFrame().pack();
             Menu.getFrame().setVisible(true);

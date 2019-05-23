@@ -5,6 +5,10 @@ import com.ikasgela.Clases.Socio;
 
 import javax.swing.*;
 import java.sql.*;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -13,8 +17,10 @@ public class SocioBD {
 
     private static Connection conn;
 
+    public static List<Socio> socios = new ArrayList<>();
 
-    public static Socio logearSocio() throws Exception {
+
+    public static void logearSocio() throws Exception {
         //Utilizamos usuario y nombre para logear a un usuario.
         GenericoBD gbd = new GenericoBD();
         conn = gbd.conectar(conn);
@@ -29,6 +35,7 @@ public class SocioBD {
             user.setCodSocio(resultado.getString("cod_soc"));
             user.setNombre(resultado.getString("nombre"));
             user.setTipo(resultado.getString("tipo_socio"));
+            Menu.codigo_socio = Integer.parseInt(user.getCodSocio());
         }
         if (user.getTipo().equalsIgnoreCase("administrador")) {
             Menu.getFrame().setContentPane(MenuAdministrador.menuAdmin);
@@ -42,31 +49,168 @@ public class SocioBD {
             Menu.getFrame().setLocationRelativeTo(null);
         }
         gbd.cerrarConexion(conn);
-        return user;
     }
 
-    public static Socio insertarSocio() throws Exception {
+    public static void insertarSocio(Socio socio) throws Exception {
         GenericoBD gbd = new GenericoBD();
         conn = gbd.conectar(conn);
-        String nombre = Registro.registro.getTFNombre().getText();
-        String apellidos = Registro.registro.getTFApellido().getText();
-        String DNI = Registro.registro.getTFDNI().getText();
-        String Telefono = Registro.registro.getTFTelefono().getText();
-        String Email = Registro.registro.getTFEmail().getText();
-        String Contraseña = Registro.registro.getTFContrasena().getText();
-        String Fecha_naci = Registro.registro.getTFFecha_Naci().getText();
-        PreparedStatement sentencia = gbd.conectar(conn).prepareStatement("INSERT INTO SOCIOS VALUES(INCREMENTO_SOCIO.NEXTVAL,?,?,default,?,DEFAULT,?,DEFAULT,DEFAULT,NULL,DEFAULT,NULL,NULL,DEFAULT,'NO',DEFAULT,null);");
-        sentencia.setString(1, nombre);
-        sentencia.setString(2, apellidos);
-        Socio user = new Socio();
-        ResultSet resultado = sentencia.executeQuery();
-        if (resultado.next()) {
-            user.setCodSocio(resultado.getString("cod_soc"));
-            user.setNombre(resultado.getString("nombre"));
-            user.setTipo(resultado.getString("tipo_socio"));
+        PreparedStatement sentencia = gbd.conectar(conn).prepareStatement("INSERT INTO SOCIOS(COD_SOC,NOMBRE,APELLIDOS,DNI,TELEFONO,EMAIL,FECHA_NACI,PASSWD) VALUES(INCREMENTO_SOCIO.NEXTVAL,?,?,?,?,?,?,?)");
+        sentencia.setString(1, socio.getNombre());
+        sentencia.setString(2, socio.getApellido());
+        sentencia.setString(3, socio.getDNI());
+        sentencia.setInt(4, socio.getTelefono());
+        sentencia.setString(5, socio.getEmail());
+        sentencia.setDate(6, Date.valueOf(socio.getFecha_Nacimiento()));
+        sentencia.setString(7, socio.getContrasena());
+        sentencia.executeUpdate();
+        gbd.cerrarConexion(conn);
+    }
+
+    public static void validarSocio(Socio socio) throws Exception {
+        GenericoBD gbd = new GenericoBD();
+        conn = gbd.conectar(conn);
+        PreparedStatement sentencia = gbd.conectar(conn).prepareStatement("UPDATE SOCIOS SET TIPO_SOCIO='USUARIO' WHERE COD_SOC=?");
+        sentencia.setString(1, socio.getCodSocio());
+        sentencia.executeUpdate();
+        gbd.cerrarConexion(conn);
+    }
+
+    public static void listadoSocio() throws Exception {
+        GenericoBD gbd = new GenericoBD();
+        conn = gbd.conectar(conn);
+        PreparedStatement sentencia = gbd.conectar(conn).prepareStatement("SELECT * FROM SOCIOS");
+        ResultSet resultSet = sentencia.executeQuery();
+        while (resultSet.next()) {
+            Socio socio = new Socio();
+            socio.setCodSocio(resultSet.getString("COD_SOC"));
+            socio.setNombre(resultSet.getString("NOMBRE"));
+            socio.setApellido(resultSet.getString("APELLIDOS"));
+            socio.setDNI(resultSet.getString("DNI"));
+            socio.setTelefono(resultSet.getInt("TELEFONO"));
+            socio.setEmail(resultSet.getString("EMAIL"));
+            socio.setFecha_Nacimiento(resultSet.getDate("FECHA_NACI").toLocalDate());
+            socio.setContrasena(resultSet.getString("PASSWD"));
+            socio.setTipo(resultSet.getString("TIPO_SOCIO"));
+            socios.add(socio);
         }
         gbd.cerrarConexion(conn);
-        return user;
+
+
+    }
+
+    public static void listadoValidarSocio() throws Exception {
+        GenericoBD gbd = new GenericoBD();
+        conn = gbd.conectar(conn);
+        PreparedStatement sentencia = gbd.conectar(conn).prepareStatement("SELECT * FROM SOCIOS WHERE TIPO_SOCIO='PENDIENTE'");
+        ResultSet resultSet = sentencia.executeQuery();
+        while (resultSet.next()) {
+            Socio socio = new Socio();
+            socio.setCodSocio(resultSet.getString("COD_SOC"));
+            socio.setNombre(resultSet.getString("NOMBRE"));
+            socio.setApellido(resultSet.getString("APELLIDOS"));
+            socio.setDNI(resultSet.getString("DNI"));
+            socio.setTelefono(resultSet.getInt("TELEFONO"));
+            socio.setEmail(resultSet.getString("EMAIL"));
+            socio.setFecha_Nacimiento(resultSet.getDate("FECHA_NACI").toLocalDate());
+            socio.setContrasena(resultSet.getString("PASSWD"));
+            socio.setTipo(resultSet.getString("TIPO_SOCIO"));
+            socios.add(socio);
+        }
+        gbd.cerrarConexion(conn);
+
+    }
+
+    public static void listadoUsuarioSocio() throws Exception {
+        GenericoBD gbd = new GenericoBD();
+        conn = gbd.conectar(conn);
+        PreparedStatement sentencia = gbd.conectar(conn).prepareStatement("SELECT * FROM SOCIOS WHERE TIPO_SOCIO='USUARIO'");
+        ResultSet resultSet = sentencia.executeQuery();
+        while (resultSet.next()) {
+            Socio socio = new Socio();
+            socio.setCodSocio(resultSet.getString("COD_SOC"));
+            socio.setNombre(resultSet.getString("NOMBRE"));
+            socio.setApellido(resultSet.getString("APELLIDOS"));
+            socio.setDNI(resultSet.getString("DNI"));
+            socio.setTelefono(resultSet.getInt("TELEFONO"));
+            socio.setEmail(resultSet.getString("EMAIL"));
+            socio.setFecha_Nacimiento(resultSet.getDate("FECHA_NACI").toLocalDate());
+            socio.setContrasena(resultSet.getString("PASSWD"));
+            socio.setTipo(resultSet.getString("TIPO_SOCIO"));
+            socios.add(socio);
+        }
+        gbd.cerrarConexion(conn);
+
+    }
+
+    public static void listadoAdministradorSocio() throws Exception {
+        GenericoBD gbd = new GenericoBD();
+        conn = gbd.conectar(conn);
+        PreparedStatement sentencia = gbd.conectar(conn).prepareStatement("SELECT * FROM SOCIOS WHERE TIPO_SOCIO='ADMINISTRADOR'");
+        ResultSet resultSet = sentencia.executeQuery();
+        while (resultSet.next()) {
+            Socio socio = new Socio();
+            socio.setCodSocio(resultSet.getString("COD_SOC"));
+            socio.setNombre(resultSet.getString("NOMBRE"));
+            socio.setApellido(resultSet.getString("APELLIDOS"));
+            socio.setDNI(resultSet.getString("DNI"));
+            socio.setTelefono(resultSet.getInt("TELEFONO"));
+            socio.setEmail(resultSet.getString("EMAIL"));
+            socio.setFecha_Nacimiento(resultSet.getDate("FECHA_NACI").toLocalDate());
+            socio.setContrasena(resultSet.getString("PASSWD"));
+            socio.setTipo(resultSet.getString("TIPO_SOCIO"));
+            socios.add(socio);
+        }
+        gbd.cerrarConexion(conn);
+
+    }
+
+/*No actualiza*/
+    public static void actualizarSocio(Socio socio) throws Exception {
+        GenericoBD gbd = new GenericoBD();
+        conn = gbd.conectar(conn);
+        PreparedStatement sentencia = gbd.conectar(conn).prepareStatement("UPDATE SOCIOS SET NOMBRE = ?, APELLIDOS = ?, DNI = ?, TELEFONO = ?, EMAIL = ?, FECHA_NACI  = ?, PASSWD = ?  WHERE COD_SOC = ?");
+        sentencia.setString(1, socio.getNombre());
+        sentencia.setString(2, socio.getApellido());
+        sentencia.setString(3, socio.getDNI());
+        sentencia.setInt(4, socio.getTelefono());
+        sentencia.setString(5, socio.getEmail());
+        sentencia.setDate(6, Date.valueOf(socio.getFecha_Nacimiento()));
+        sentencia.setString(7, socio.getContrasena());
+        sentencia.setString(8, socio.getCodSocio());
+        sentencia.executeUpdate();
+        gbd.cerrarConexion(conn);
+    }
+
+    public static void borrarSocio(Socio socio) throws Exception {
+        GenericoBD gbd = new GenericoBD();
+        conn = gbd.conectar(conn);
+        PreparedStatement sentencia = gbd.conectar(conn).prepareStatement("delete  SOCIOS   WHERE COD_SOC = ?");
+        sentencia.setString(1, socio.getCodSocio());
+        sentencia.executeUpdate();
+        gbd.cerrarConexion(conn);
+    }
+
+    public static void buscarSocio(Socio socio) throws Exception {
+        GenericoBD gbd = new GenericoBD();
+        conn = gbd.conectar(conn);
+        PreparedStatement sentencia = gbd.conectar(conn).prepareStatement("SELECT * FROM SOCIOS WHERE COD_SOC = ?");
+        sentencia.setString(1, socio.getCodSocio());
+        ResultSet resultSet = sentencia.executeQuery();
+        if (resultSet.next()) {
+            socio.setCodSocio(resultSet.getString("COD_SOC"));
+            socio.setNombre(resultSet.getString("NOMBRE"));
+            socio.setApellido(resultSet.getString("APELLIDOS"));
+            socio.setDNI(resultSet.getString("DNI"));
+            socio.setTelefono(resultSet.getInt("TELEFONO"));
+            socio.setEmail(resultSet.getString("EMAIL"));
+            socio.setFecha_Nacimiento(LocalDate.parse((CharSequence) resultSet.getDate("FECHA_NACI")));
+            socio.setContrasena(resultSet.getString("PASSWD"));
+            gbd.cerrarConexion(conn);
+        } else {
+            gbd.cerrarConexion(conn);
+        }
+
+
     }
 
 

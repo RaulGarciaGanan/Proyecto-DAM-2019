@@ -1,8 +1,12 @@
 package com.ikasgela;
 
+import com.ikasgela.Clases.Socio;
+import com.ikasgela.ClasesBD.SocioBD;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.time.LocalDate;
 
 public class DatosPersonales {
     private JPanel DatosPersonal;
@@ -18,6 +22,7 @@ public class DatosPersonales {
     private JTextField TFTelefono;
     private JTextField TFEmail;
     private JTextField TFFechaNacimiento;
+    private JPasswordField TFContreasena;
 
     public static JPanel datosPersonalesMenu = new DatosPersonales().DatosPersonal;
 
@@ -30,6 +35,36 @@ public class DatosPersonales {
                 Menu.getFrame().setVisible(true);
                 Menu.getFrame().setLocationRelativeTo(null);
                 Menu.getFrame().setLocationRelativeTo(null);
+            }
+        });
+
+        JLCodSocio.setText(SocioBD.socios.get(ListadoSocios.num).getCodSocio());
+        TFNombre.setText(SocioBD.socios.get(ListadoSocios.num).getNombre());
+        TFApellido.setText(SocioBD.socios.get(ListadoSocios.num).getApellido());
+        TFDNI.setText(SocioBD.socios.get(ListadoSocios.num).getDNI());
+        TFTelefono.setText(String.valueOf(SocioBD.socios.get(ListadoSocios.num).getTelefono()));
+        TFEmail.setText(SocioBD.socios.get(ListadoSocios.num).getEmail());
+        TFContreasena.setText(SocioBD.socios.get(ListadoSocios.num).getContrasena());
+        TFFechaNacimiento.setText(SocioBD.socios.get(ListadoSocios.num).getFecha_Nacimiento().toString());
+        JLTipo_Socio.setText(SocioBD.socios.get(ListadoSocios.num).getTipo());
+        JLCargo.setText(SocioBD.socios.get(ListadoSocios.num).getCargo());
+        guardarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Socio soc = new Socio();
+                soc.setNombre(TFNombre.getText());
+                soc.setApellido(TFApellido.getText());
+                soc.setDNI(TFDNI.getText());
+                soc.setTelefono(Integer.parseInt(TFTelefono.getText()));
+                soc.setEmail(TFEmail.getText());
+                soc.setContrasena(TFContreasena.getText());
+                soc.setFecha_Nacimiento(LocalDate.parse(TFFechaNacimiento.getText()));
+                try {
+                    SocioBD.actualizarSocio(soc);
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+
             }
         });
     }
@@ -136,5 +171,13 @@ public class DatosPersonales {
 
     public void setTFFechaNacimiento(JTextField TFFechaNacimiento) {
         this.TFFechaNacimiento = TFFechaNacimiento;
+    }
+
+    public JPasswordField getTFContreasena() {
+        return TFContreasena;
+    }
+
+    public void setTFContreasena(JPasswordField TFContreasena) {
+        this.TFContreasena = TFContreasena;
     }
 }

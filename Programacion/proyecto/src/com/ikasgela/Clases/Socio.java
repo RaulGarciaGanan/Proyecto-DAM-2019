@@ -1,15 +1,17 @@
 package com.ikasgela.Clases;
 
+import java.sql.Date;
 import java.sql.Time;
+import java.time.LocalDate;
 
 public class Socio {
     private String codSocio;
     private String Nombre;
     private String Apellido;
     private String DNI;
-    private String Telefono;
+    private int Telefono;
     private String Email;
-    private Time Fecha_Nacimiento;
+    private LocalDate Fecha_Nacimiento;
     private String Cargo;
     private String Contrasena;
     private String Tipo;
@@ -17,7 +19,7 @@ public class Socio {
     public Socio() {
     }
 
-    public Socio(String codSocio, String nombre, String apellido, String DNI, String telefono, String email, Time fecha_Nacimiento, String cargo, String contrasena, String tipo) {
+    public Socio(String codSocio, String nombre, String apellido, String DNI, int telefono, String email, LocalDate fecha_Nacimiento, String cargo, String contrasena, String tipo) {
         this.codSocio = codSocio;
         Nombre = nombre;
         Apellido = apellido;
@@ -62,12 +64,12 @@ public class Socio {
         this.DNI = DNI;
     }
 
-    public String getTelefono() {
+    public int getTelefono() {
         return Telefono;
     }
 
 
-    public void setTelefono(String telefono) {
+    public void setTelefono(int telefono) {
         Telefono = telefono;
     }
 
@@ -79,11 +81,11 @@ public class Socio {
         Email = email;
     }
 
-    public Time getFecha_Nacimiento() {
+    public LocalDate getFecha_Nacimiento() {
         return Fecha_Nacimiento;
     }
 
-    public void setFecha_Nacimiento(Time fecha_Nacimiento) {
+    public void setFecha_Nacimiento(LocalDate fecha_Nacimiento) {
         Fecha_Nacimiento = fecha_Nacimiento;
     }
 

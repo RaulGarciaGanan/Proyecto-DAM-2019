@@ -2,18 +2,30 @@ package com.ikasgela.Clases;
 
 import java.lang.management.ThreadInfo;
 import java.sql.Time;
+import java.time.LocalDate;
 
 public class Actividad {
 
     private String codigo;
-    private Time fecha;
+    private LocalDate fecha_inicio;
+    private LocalDate fecha_fin;
+    private String tipo;
+    private String dificultad;
+    private int cod_soc;
     private String descripcion;
     private Double precio;
     private boolean suspension;
 
-    public Actividad(String codigo, Time fecha, String descripcion, Double precio, boolean suspension) {
+    public Actividad() {
+    }
+
+    public Actividad(String codigo, LocalDate fecha_inicio, LocalDate fecha_fin, String tipo, String dificultad, int cod_soc, String descripcion, Double precio, boolean suspension) {
         this.codigo = codigo;
-        this.fecha = fecha;
+        this.fecha_inicio = fecha_inicio;
+        this.fecha_fin = fecha_fin;
+        this.tipo = tipo;
+        this.dificultad = dificultad;
+        this.cod_soc = cod_soc;
         this.descripcion = descripcion;
         this.precio = precio;
         this.suspension = suspension;
@@ -27,12 +39,44 @@ public class Actividad {
         this.codigo = codigo;
     }
 
-    public Time getFecha() {
-        return fecha;
+    public LocalDate getFecha_inicio() {
+        return fecha_inicio;
     }
 
-    public void setFecha(Time fecha) {
-        this.fecha = fecha;
+    public void setFecha_inicio(LocalDate fecha_inicio) {
+        this.fecha_inicio = fecha_inicio;
+    }
+
+    public LocalDate getFecha_fin() {
+        return fecha_fin;
+    }
+
+    public void setFecha_fin(LocalDate fecha_fin) {
+        this.fecha_fin = fecha_fin;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public String getDificultad() {
+        return dificultad;
+    }
+
+    public void setDificultad(String dificultad) {
+        this.dificultad = dificultad;
+    }
+
+    public int getCod_soc() {
+        return cod_soc;
+    }
+
+    public void setCod_soc(int cod_soc) {
+        this.cod_soc = cod_soc;
     }
 
     public String getDescripcion() {

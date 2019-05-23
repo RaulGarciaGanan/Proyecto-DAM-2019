@@ -1,8 +1,15 @@
 package com.ikasgela;
 
+import com.ikasgela.Clases.Socio;
+import com.ikasgela.ClasesBD.SocioBD;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Date;
+import java.sql.Time;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Registro {
     private JPanel Registro;
@@ -16,7 +23,7 @@ public class Registro {
     private JButton cancelarButton;
     private JTextField TFContrasena;
 
-    public static Registro registro = new Registro();
+
     public static JPanel registroMenu = new Registro().Registro;
 
     public Registro() {
@@ -25,6 +32,24 @@ public class Registro {
             Menu.getFrame().pack();
             Menu.getFrame().setVisible(true);
 
+        });
+        enviarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    Socio soc = new Socio();
+                    soc.setNombre(TFNombre.getText());
+                    soc.setApellido(TFApellido.getText());
+                    soc.setDNI(TFDNI.getText());
+                    soc.setTelefono(Integer.parseInt(TFTelefono.getText()));
+                    soc.setEmail(TFEmail.getText());
+                    soc.setFecha_Nacimiento(LocalDate.parse(TFFecha_Naci.getText(),DateTimeFormatter.ofPattern("dd/MM/yyyy")));
+                    soc.setContrasena(TFContrasena.getText());
+                    SocioBD.insertarSocio(soc);
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
         });
     }
 

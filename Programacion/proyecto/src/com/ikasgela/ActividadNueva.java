@@ -1,22 +1,36 @@
 package com.ikasgela;
 
+import com.ikasgela.Clases.Actividad;
+import com.ikasgela.ClasesBD.ActividadBD;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class ActividadNueva {
-    private JPanel Actividad;
+    private JPanel Actividades;
     private JComboBox CBtipoActividad;
     private JComboBox CBDificultad;
-    private JTextField TFFecha;
+    private JTextField TFFecha_Incio;
     private JTextField TFDescripcion;
     private JTextField TFPrecio;
     private JButton cancelarButton;
     private JButton guardarButton;
+    private JTextField TFFecha_Fin;
 
-    public static JPanel actividadMenu = new ActividadNueva().Actividad;
+    public static JPanel actividadMenu = new ActividadNueva().Actividades;
 
     public ActividadNueva() {
+        CBDificultad.addItem("Baja");
+        CBDificultad.addItem("Media");
+        CBDificultad.addItem("Alta");
+        CBtipoActividad.addItem("Salida al monte");
+        CBtipoActividad.addItem("Albergue de fin de semana");
+        CBtipoActividad.addItem("Reunion");
+        CBtipoActividad.addItem("Comida");
+        CBtipoActividad.addItem("Otros");
         cancelarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -29,17 +43,29 @@ public class ActividadNueva {
         guardarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                 Actividad actividad = new Actividad();
+                 actividad.setDificultad(String.valueOf(CBDificultad.getSelectedItem()));
+                 actividad.setTipo(String.valueOf(CBtipoActividad.getSelectedItem()));
+                 actividad.setPrecio(Double.parseDouble(TFPrecio.getText()));
+                 actividad.setFecha_inicio(LocalDate.parse(TFFecha_Incio.getText(),DateTimeFormatter.ofPattern("dd/MM/yyyy")));
+                 actividad.setFecha_fin(LocalDate.parse(TFFecha_Fin.getText(),DateTimeFormatter.ofPattern("dd/MM/yyyy")));
+                 actividad.setDescripcion(TFDescripcion.getText());
+                 actividad.setCod_soc(Menu.codigo_socio);
+                try {
+                    ActividadBD.insertarActividad(actividad);
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
             }
         });
     }
 
-    public JPanel getActividad() {
-        return Actividad;
+    public JPanel getActividades() {
+        return Actividades;
     }
 
-    public void setActividad(JPanel actividad) {
-        Actividad = actividad;
+    public void setActividades(JPanel actividades) {
+        Actividades = actividades;
     }
 
     public JComboBox getCBtipoActividad() {
@@ -58,12 +84,12 @@ public class ActividadNueva {
         this.CBDificultad = CBDificultad;
     }
 
-    public JTextField getTFFecha() {
-        return TFFecha;
+    public JTextField getTFFecha_Incio() {
+        return TFFecha_Incio;
     }
 
-    public void setTFFecha(JTextField TFFecha) {
-        this.TFFecha = TFFecha;
+    public void setTFFecha_Incio(JTextField TFFecha_Incio) {
+        this.TFFecha_Incio = TFFecha_Incio;
     }
 
     public JTextField getTFDescripcion() {
