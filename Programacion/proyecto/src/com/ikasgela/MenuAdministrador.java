@@ -39,6 +39,9 @@ public class MenuAdministrador {
             Menu.getFrame().setVisible(true);
             Menu.getFrame().setLocationRelativeTo(null);
         });
+
+
+
         salidasButton.addActionListener(e -> {
             Menu.getFrame().setContentPane(GestionActividades.actividadesMenu);
             Menu.getFrame().setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -56,7 +59,7 @@ public class MenuAdministrador {
         juntasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Menu.getFrame().setContentPane(Juntas.menuJunta);
+                Menu.getFrame().setContentPane(GestionJuntas.gestionJuntasMenu);
                 Menu.getFrame().pack();
                 Menu.getFrame().setVisible(true);
                 Menu.getFrame().setLocationRelativeTo(null);

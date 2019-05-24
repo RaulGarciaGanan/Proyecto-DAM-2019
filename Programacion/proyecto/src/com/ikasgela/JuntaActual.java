@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Juntas {
+public class JuntaActual {
     private JTextField Fecha_fin;
     private JTextField Presidente;
     private JTextField VidePresi;
@@ -17,16 +17,20 @@ public class Juntas {
     private JTextField Fecha_inicio;
 
 
-    public static JPanel menuJunta = new Juntas().Junta;
+    public static JPanel menuJunta = new JuntaActual().Junta;
 
-    public Juntas() {
-        volverButton.addActionListener(new ActionListener() {
+    public JuntaActual() {
+        volverButton.addActionListener(e -> {
+            Menu.getFrame().setContentPane(GestionJuntas.gestionJuntasMenu);
+            Menu.getFrame().pack();
+            Menu.getFrame().setVisible(true);
+            Menu.getFrame().setLocationRelativeTo(null);
+        });
+
+        guardarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Menu.getFrame().setContentPane(MenuAdministrador.menuAdmin);
-                Menu.getFrame().pack();
-                Menu.getFrame().setVisible(true);
-                Menu.getFrame().setLocationRelativeTo(null);
+
             }
         });
     }
