@@ -32,10 +32,10 @@ public class SocioBD {
         Socio user = new Socio();
         ResultSet resultado = sentencia.executeQuery();
         if (resultado.next()) {
-            user.setCodSocio(resultado.getString("cod_soc"));
+            user.setCodSocio(resultado.getInt("cod_soc"));
             user.setNombre(resultado.getString("nombre"));
             user.setTipo(resultado.getString("tipo_socio"));
-            Menu.codigo_socio = Integer.parseInt(user.getCodSocio());
+            Menu.codigo_socio = user.getCodSocio();
         }
         if (user.getTipo().equalsIgnoreCase("administrador")) {
             Menu.getFrame().setContentPane(MenuAdministrador.menuAdmin);
@@ -70,7 +70,7 @@ public class SocioBD {
         GenericoBD gbd = new GenericoBD();
         conn = gbd.conectar(conn);
         PreparedStatement sentencia = gbd.conectar(conn).prepareStatement("UPDATE SOCIOS SET TIPO_SOCIO='USUARIO' WHERE COD_SOC=?");
-        sentencia.setString(1, socio.getCodSocio());
+        sentencia.setInt(1, socio.getCodSocio());
         sentencia.executeUpdate();
         gbd.cerrarConexion(conn);
     }
@@ -82,7 +82,7 @@ public class SocioBD {
         ResultSet resultSet = sentencia.executeQuery();
         while (resultSet.next()) {
             Socio socio = new Socio();
-            socio.setCodSocio(resultSet.getString("COD_SOC"));
+            socio.setCodSocio(resultSet.getInt("COD_SOC"));
             socio.setNombre(resultSet.getString("NOMBRE"));
             socio.setApellido(resultSet.getString("APELLIDOS"));
             socio.setDNI(resultSet.getString("DNI"));
@@ -105,7 +105,7 @@ public class SocioBD {
         ResultSet resultSet = sentencia.executeQuery();
         while (resultSet.next()) {
             Socio socio = new Socio();
-            socio.setCodSocio(resultSet.getString("COD_SOC"));
+            socio.setCodSocio(resultSet.getInt("COD_SOC"));
             socio.setNombre(resultSet.getString("NOMBRE"));
             socio.setApellido(resultSet.getString("APELLIDOS"));
             socio.setDNI(resultSet.getString("DNI"));
@@ -127,7 +127,7 @@ public class SocioBD {
         ResultSet resultSet = sentencia.executeQuery();
         while (resultSet.next()) {
             Socio socio = new Socio();
-            socio.setCodSocio(resultSet.getString("COD_SOC"));
+            socio.setCodSocio(resultSet.getInt("COD_SOC"));
             socio.setNombre(resultSet.getString("NOMBRE"));
             socio.setApellido(resultSet.getString("APELLIDOS"));
             socio.setDNI(resultSet.getString("DNI"));
@@ -149,7 +149,7 @@ public class SocioBD {
         ResultSet resultSet = sentencia.executeQuery();
         while (resultSet.next()) {
             Socio socio = new Socio();
-            socio.setCodSocio(resultSet.getString("COD_SOC"));
+            socio.setCodSocio(resultSet.getInt("COD_SOC"));
             socio.setNombre(resultSet.getString("NOMBRE"));
             socio.setApellido(resultSet.getString("APELLIDOS"));
             socio.setDNI(resultSet.getString("DNI"));
@@ -176,8 +176,9 @@ public class SocioBD {
         sentencia.setString(5, socio.getEmail());
         sentencia.setDate(6, Date.valueOf(socio.getFecha_Nacimiento()));
         sentencia.setString(7, socio.getContrasena());
-        sentencia.setString(8, socio.getCodSocio());
-        sentencia.executeUpdate();
+        sentencia.setInt(8, socio.getCodSocio());
+
+        System.out.println(sentencia.executeUpdate());
         gbd.cerrarConexion(conn);
     }
 
@@ -185,7 +186,7 @@ public class SocioBD {
         GenericoBD gbd = new GenericoBD();
         conn = gbd.conectar(conn);
         PreparedStatement sentencia = gbd.conectar(conn).prepareStatement("delete  SOCIOS   WHERE COD_SOC = ?");
-        sentencia.setString(1, socio.getCodSocio());
+        sentencia.setInt(1, socio.getCodSocio());
         sentencia.executeUpdate();
         gbd.cerrarConexion(conn);
     }
@@ -194,10 +195,10 @@ public class SocioBD {
         GenericoBD gbd = new GenericoBD();
         conn = gbd.conectar(conn);
         PreparedStatement sentencia = gbd.conectar(conn).prepareStatement("SELECT * FROM SOCIOS WHERE COD_SOC = ?");
-        sentencia.setString(1, socio.getCodSocio());
+        sentencia.setInt(1, socio.getCodSocio());
         ResultSet resultSet = sentencia.executeQuery();
         if (resultSet.next()) {
-            socio.setCodSocio(resultSet.getString("COD_SOC"));
+            socio.setCodSocio(resultSet.getInt("COD_SOC"));
             socio.setNombre(resultSet.getString("NOMBRE"));
             socio.setApellido(resultSet.getString("APELLIDOS"));
             socio.setDNI(resultSet.getString("DNI"));

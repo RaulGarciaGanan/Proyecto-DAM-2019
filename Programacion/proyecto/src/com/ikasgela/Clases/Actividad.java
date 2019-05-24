@@ -14,12 +14,13 @@ public class Actividad {
     private int cod_soc;
     private String descripcion;
     private Double precio;
-    private boolean suspension;
+    private String suspension;
+    private String aceptada;
 
     public Actividad() {
     }
 
-    public Actividad(String codigo, LocalDate fecha_inicio, LocalDate fecha_fin, String tipo, String dificultad, int cod_soc, String descripcion, Double precio, boolean suspension) {
+    public Actividad(String codigo, LocalDate fecha_inicio, LocalDate fecha_fin, String tipo, String dificultad, int cod_soc, String descripcion, Double precio, String suspension, String aceptada) {
         this.codigo = codigo;
         this.fecha_inicio = fecha_inicio;
         this.fecha_fin = fecha_fin;
@@ -29,6 +30,7 @@ public class Actividad {
         this.descripcion = descripcion;
         this.precio = precio;
         this.suspension = suspension;
+        this.aceptada = aceptada;
     }
 
     public String getCodigo() {
@@ -95,11 +97,19 @@ public class Actividad {
         this.precio = precio;
     }
 
-    public boolean isSuspension() {
+    public void setSuspension(String suspension) {
+        this.suspension = suspension;
+    }
+
+    public String getSuspension() {
         return suspension;
     }
 
-    public void setSuspension(boolean suspension) {
-        this.suspension = suspension;
+    public String getAceptada() {
+        return aceptada;
+    }
+
+    public void setAceptada(String aceptada) {
+        this.aceptada = aceptada;
     }
 }

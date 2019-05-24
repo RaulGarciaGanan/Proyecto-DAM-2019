@@ -9,6 +9,7 @@ public class GestionCuotas {
     private JPanel GestionCuotas;
     private JButton modificarCuotasDeSocioButton;
     private JButton volverButton;
+    private JButton nuevaCuotaButton;
 
     public static JPanel gestionCuotasCuotasMenu = new GestionCuotas().GestionCuotas;
 
@@ -24,6 +25,16 @@ public class GestionCuotas {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Menu.getFrame().setContentPane(ListadoCuotas.menuListadoCuotas);
+                Menu.getFrame().setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                Menu.getFrame().pack();
+                Menu.getFrame().setVisible(true);
+                Menu.getFrame().setLocationRelativeTo(null);
+            }
+        });
+        nuevaCuotaButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Menu.getFrame().setContentPane(NuevaCuota.nuevaCuotaMenu);
                 Menu.getFrame().setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 Menu.getFrame().pack();
                 Menu.getFrame().setVisible(true);

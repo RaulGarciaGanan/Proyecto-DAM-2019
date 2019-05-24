@@ -23,14 +23,14 @@ public class ActividadNueva {
     public static JPanel actividadMenu = new ActividadNueva().Actividades;
 
     public ActividadNueva() {
-        CBDificultad.addItem("Baja");
-        CBDificultad.addItem("Media");
-        CBDificultad.addItem("Alta");
-        CBtipoActividad.addItem("Salida al monte");
-        CBtipoActividad.addItem("Albergue de fin de semana");
-        CBtipoActividad.addItem("Reunion");
-        CBtipoActividad.addItem("Comida");
-        CBtipoActividad.addItem("Otros");
+        CBDificultad.addItem("BAJA");
+        CBDificultad.addItem("MEDIA");
+        CBDificultad.addItem("ALTA");
+        CBtipoActividad.addItem("SALIDA AL MONTE");
+        CBtipoActividad.addItem("ALBERFGUE FIN DE SEMANA");
+        CBtipoActividad.addItem("REUNION");
+        CBtipoActividad.addItem("COMIDA");
+        CBtipoActividad.addItem("OTROS");
         cancelarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -49,7 +49,6 @@ public class ActividadNueva {
                  actividad.setPrecio(Double.parseDouble(TFPrecio.getText()));
                  actividad.setFecha_inicio(LocalDate.parse(TFFecha_Incio.getText(),DateTimeFormatter.ofPattern("dd/MM/yyyy")));
                  actividad.setFecha_fin(LocalDate.parse(TFFecha_Fin.getText(),DateTimeFormatter.ofPattern("dd/MM/yyyy")));
-                 actividad.setDescripcion(TFDescripcion.getText());
                  actividad.setCod_soc(Menu.codigo_socio);
                 try {
                     ActividadBD.insertarActividad(actividad);

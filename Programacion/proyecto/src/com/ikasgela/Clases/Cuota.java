@@ -1,20 +1,37 @@
 package com.ikasgela.Clases;
 
 import java.sql.Time;
+import java.time.LocalDate;
 
 public class Cuota {
+    private String codigo;
     private String tipo_cuota;
-    private String si_no_cuota;
-    private Time anyo_validez;
-    private int cuanto_pagar;
+    private String si_no_pagado;
+    private int anyo_validez;
+    private int informacion_pago;
     private int importe_ingresado;
+    private int Cod_soc;
 
-    public Cuota(String tipo_cuota, String si_no_cuota, Time anyo_validez, int cuanto_pagar, int importe_ingresado) {
+    public Cuota() {
+    }
+
+    public Cuota(String codigo, String tipo_cuota, String si_no_pagado, int anyo_validez, int informacion_pago, int importe_ingresado, int cod_soc) {
+        this.codigo = codigo;
         this.tipo_cuota = tipo_cuota;
-        this.si_no_cuota = si_no_cuota;
+        this.si_no_pagado = si_no_pagado;
         this.anyo_validez = anyo_validez;
-        this.cuanto_pagar = cuanto_pagar;
+        this.informacion_pago = informacion_pago;
         this.importe_ingresado = importe_ingresado;
+        Cod_soc = cod_soc;
+
+    }
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
     }
 
     public String getTipo_cuota() {
@@ -25,28 +42,28 @@ public class Cuota {
         this.tipo_cuota = tipo_cuota;
     }
 
-    public String getSi_no_cuota() {
-        return si_no_cuota;
+    public String getSi_no_pagado() {
+        return si_no_pagado;
     }
 
-    public void setSi_no_cuota(String si_no_cuota) {
-        this.si_no_cuota = si_no_cuota;
+    public void setSi_no_pagado(String si_no_pagado) {
+        this.si_no_pagado = si_no_pagado;
     }
 
-    public Time getAnyo_validez() {
+    public int getAnyo_validez() {
         return anyo_validez;
     }
 
-    public void setAnyo_validez(Time anyo_validez) {
+    public void setAnyo_validez(int anyo_validez) {
         this.anyo_validez = anyo_validez;
     }
 
-    public int getCuanto_pagar() {
-        return cuanto_pagar;
+    public int getInformacion_pago() {
+        return informacion_pago;
     }
 
-    public void setCuanto_pagar(int cuanto_pagar) {
-        this.cuanto_pagar = cuanto_pagar;
+    public void setInformacion_pago(int informacion_pago) {
+        this.informacion_pago = informacion_pago;
     }
 
     public int getImporte_ingresado() {
@@ -55,5 +72,13 @@ public class Cuota {
 
     public void setImporte_ingresado(int importe_ingresado) {
         this.importe_ingresado = importe_ingresado;
+    }
+
+    public int getCod_soc() {
+        return Cod_soc;
+    }
+
+    public void setCod_soc(int cod_soc) {
+        Cod_soc = cod_soc;
     }
 }

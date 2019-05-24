@@ -5,7 +5,7 @@ import java.sql.Time;
 import java.time.LocalDate;
 
 public class Socio {
-    private String codSocio;
+    private int codSocio;
     private String Nombre;
     private String Apellido;
     private String DNI;
@@ -19,7 +19,7 @@ public class Socio {
     public Socio() {
     }
 
-    public Socio(String codSocio, String nombre, String apellido, String DNI, int telefono, String email, LocalDate fecha_Nacimiento, String cargo, String contrasena, String tipo) {
+    public Socio(int codSocio, String nombre, String apellido, String DNI, int telefono, String email, LocalDate fecha_Nacimiento, String cargo, String contrasena, String tipo) {
         this.codSocio = codSocio;
         Nombre = nombre;
         Apellido = apellido;
@@ -32,11 +32,11 @@ public class Socio {
         Tipo = tipo;
     }
 
-    public String getCodSocio() {
+    public int getCodSocio() {
         return codSocio;
     }
 
-    public void setCodSocio(String codSocio) {
+    public void setCodSocio(int codSocio) {
         this.codSocio = codSocio;
     }
 

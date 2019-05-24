@@ -38,7 +38,7 @@ public class DatosPersonales {
             }
         });
 
-        JLCodSocio.setText(SocioBD.socios.get(ListadoSocios.num).getCodSocio());
+        JLCodSocio.setText(String.valueOf(SocioBD.socios.get(ListadoSocios.num).getCodSocio()));
         TFNombre.setText(SocioBD.socios.get(ListadoSocios.num).getNombre());
         TFApellido.setText(SocioBD.socios.get(ListadoSocios.num).getApellido());
         TFDNI.setText(SocioBD.socios.get(ListadoSocios.num).getDNI());
@@ -57,7 +57,7 @@ public class DatosPersonales {
                 soc.setDNI(TFDNI.getText());
                 soc.setTelefono(Integer.parseInt(TFTelefono.getText()));
                 soc.setEmail(TFEmail.getText());
-                soc.setContrasena(TFContreasena.getText());
+                soc.setContrasena(String.valueOf(TFContreasena.getPassword()));
                 soc.setFecha_Nacimiento(LocalDate.parse(TFFechaNacimiento.getText()));
                 try {
                     SocioBD.actualizarSocio(soc);
